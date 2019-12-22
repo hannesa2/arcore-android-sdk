@@ -40,14 +40,14 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
-    implementation project(':shared_camera_java:app')
-    implementation project(':hello_ar_java:app')
-    implementation project(':hello_ar_c:app')
-    implementation project(':computervision_java:app')
-    implementation project(':computervision_c:app')
-    implementation project(':cloud_anchor_java:app')
-    implementation project(':augmented_image_java:app')
-    implementation project(':augmented_image_c:app')
+    implementation project(':samples:shared_camera_java:app')
+    implementation project(':samples:hello_ar_java:app')
+    implementation project(':samples:hello_ar_c:app')
+    implementation project(':samples:computervision_java:app')
+    implementation project(':samples:computervision_c:app')
+    implementation project(':samples:cloud_anchor_java:app')
+    implementation project(':samples:augmented_image_java:app')
+    implementation project(':samples:augmented_image_c:app')
 }
 
 static def getTag() {
