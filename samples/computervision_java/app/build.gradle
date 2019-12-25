@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 def setVersionName = { ->
     if (project.hasProperty("androidVersionName")) {
@@ -13,8 +13,6 @@ def setVersionName = { ->
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.google.ar.core.examples.java.computervision"
-
         // 24 is the minimum since ARCore only works with 24 and higher.
         minSdkVersion 24
         targetSdkVersion 28
