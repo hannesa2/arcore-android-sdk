@@ -30,6 +30,7 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.google.ar.core.examples.java.common.helpers.CameraPermissionHelper;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
