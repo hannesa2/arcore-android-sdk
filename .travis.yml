@@ -1,54 +1,58 @@
+sudo: false
 language: android
-
-branches:
-  only:
-    - develop
-
-sudo: true
-
 jdk:
   - oraclejdk8
 
-dist: trusty  # otherwise you run into /home/travis/.travis/functions: line 104: sdkmanager: command not found
+git:
+  depth: false
 
-env:
-  - TERM=dumb
-
-global:
-  - PATH=$ANDROID_HOME:$ANDROID_HOME/platform-tools:$PATH
-
-android:
-  components:
-    - tools
-    - platform-tools
-    - android-28
-
+# INSTRUMENTED TESTS ARE DISABLED - until Google or Travis fix the mess with emulation, only local tests are enabled
+#  - sys-img-armeabi-v7a-android-24
 install:
-  - echo $ANDROID_HOME # We assume this is correctly set when setting path
-  - sdkmanager --list || true # Look at the packages
-  - echo yes | sdkmanager "tools" # Ensure tools is updated
-  - echo y | sdkmanager 'ndk-bundle' 1>/dev/null
-  - echo y | sdkmanager 'cmake;3.6.4111459' 1>/dev/null
-  - echo y | sdkmanager 'lldb;3.0' 1>/dev/null
+  # Travis still uses 'android' command behind the 'components' section update.
+  # That command is obsolete and cannot update Android SDK Tools after 25.2.5.
+  # Let's solve it here with the new command 'sdkmanager'
+  - yes | sdkmanager --verbose "build-tools;28.0.3"
+  - yes | sdkmanager --verbose "platform-tools"
+  - yes | sdkmanager --verbose "tools"
+  - yes | sdkmanager --verbose "platforms;android-28"
+  - yes | sdkmanager --verbose "extras;android;m2repository"
+
+  # Check tools and dependencies installed
+  - yes | sdkmanager --list
+
+#  - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI -c 20M
+#  - emulator -avd test -no-skin -no-audio -no-window &
+#  - chmod +x ./wait_for_emulator.sh
+#  - ./wait_for_emulator.sh
 
 before_script:
-  - wget --quiet https://dl.google.com/android/repository/android-ndk-r15c-linux-x86_64.zip
-  - unzip -q android-ndk-r15c-linux-x86_64.zip
-  - export ANDROID_NDK_ROOT=`pwd`/android-ndk-r15c
-  - PATH=${PATH}:$ANDROID_NDK_ROOT
-
-#after_success:
-#  # try to upload version and ignore any errors
-#  - ./gradlew bintrayUpload || echo "Version seems to exists already"
-
-before_cache:
-  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
-
-cache:
-  directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+  - ./signing/decrypt.sh
 
 script:
-  - ./gradlew clean assembleDebug
+  # force init of adb way before any Gradle task that uses ADB; prevents a timeout error that skips emulators of android-24
+  - adb devices
+  - ./gradlew :all-in-one-sample:assembleRelease
+
+env:
+  global:
+    - secure: h4Y7ZvgbvOj5T71ubRcw3Fy3KXF8qHugRFLGK3q2R9YuRsDAf8XH+Y/UiXyH8sac2QSj7Zlny1kA1DEJgwhTXs9wsAVKVJCQNTJGEvhm/4uQgPeNMzMv07Lqe8V+KUBsFH5qhfPJO357ERW0k2f2qljoLSHtHStclt7iGvFdynA=
+    - secure: o9L6lXWpXowhQSdiUSmajliBUkQ6n7NrBUqhC09lqe7yXSGhEsgGRXqHoT3q2B4uIqGSiLCa9HQbW0dfDQCs+pADmzHIl3zbTViR88TSaIhOiTrqMUUl5iaO++pneZ2TzgU9bbGHbl6Ixjc6iALH2+F7P+RUM6vLTNPcfnCJa3g=
+    - secure: ydxZrS7+1ht3p1tC6DE9W9bjLQGjMkwFBwyhNmcdEM6538kN8ZCBQe7NxSsCrC1nSDBLQ17Cziv0XJHl/pCfPrbkrPPgVFpjDfPeqC2zcGcCNcFQUEylXCvQ4uRU2hKL6dPqCsOQ57Pv3qwpPoprl/usoN5Wh8V7BKplU88ZaYM=
+  matrix:
+    - ANDROID_TARGET=android-28 ANDROID_ABI=armeabi-v7a
+
+after_script:
+  - ./signing/cleanup.sh
+
+deploy:
+  provider: releases
+  api_key: ${api_key}
+  file_glob: true
+  file:
+    - "all-in-one-sample/build/outputs/apk/debug/*.apk"
+    - "all-in-one-sample/build/outputs/apk/release/*.apk"
+  skip_cleanup: true
+  on:
+    tags: true
+
