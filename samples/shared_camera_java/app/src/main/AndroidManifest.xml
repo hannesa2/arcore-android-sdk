@@ -39,10 +39,6 @@
         android:screenOrientation="fullSensor"
         android:exported = "true"
         android:resizeableActivity="false">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN"/>
-        <category android:name="android.intent.category.LAUNCHER"/>
-      </intent-filter>
     </activity>
     <!-- This tag indicates that this application requires ARCore.  This results in the Google Play
          Store downloading and installing ARCore along with the application. -->
