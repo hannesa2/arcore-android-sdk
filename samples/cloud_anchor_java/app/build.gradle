@@ -15,6 +15,9 @@
  */
 apply plugin: 'com.android.library'
 
+def releaseKey = System.getenv("releaseKey")
+println "releaseKey=$releaseKey"
+
 android {
     compileSdkVersion 33
     defaultConfig {
@@ -30,8 +33,12 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     buildTypes {
+        debug {
+            resValue "string", "GOOGLE_ARCORE_API_KEY", "debugXXXXXXXXXXXXXXXXX"
+        }
         release {
             minifyEnabled false
+            resValue "string", "GOOGLE_ARCORE_API_KEY", releaseKey.toString()
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
