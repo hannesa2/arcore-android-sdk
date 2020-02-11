@@ -10,6 +10,8 @@ def setVersionName = { ->
     }
 }
 
+def arcore_key = System.getenv("ARCORE_KEY") == null ? "(your ARCore API key)" : System.getenv("ARCORE_KEY")
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -18,6 +20,8 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName setVersionName()
+
+        resValue "string", "GOOGLE_ARCORE_API_KEY", "$arcore_key"
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
