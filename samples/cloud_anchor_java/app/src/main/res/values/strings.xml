@@ -59,4 +59,6 @@
   <string name="learn_more">Learn more</string>
   <!-- Privacy learn more URL. [CHAR_LIMIT=NONE] -->
   <string name="learn_more_url">https://developers.google.com/ar/data-privacy</string>
+
+  <string name="GOOGLE_ARCORE_API_KEY">YOUR KEY</string>
 </resources>
