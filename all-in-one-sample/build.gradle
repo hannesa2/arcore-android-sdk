@@ -23,7 +23,6 @@ android {
         versionCode getGitCommitCount()
         versionName setVersionName()
 
-        buildConfigField "String", 'GIT_USER', "\"" + getGitUser() + "\""
         buildConfigField "String", 'GIT_REPOSITORY', "\"" + getGitRepository() + "\""
     }
     compileOptions {
@@ -90,7 +89,7 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation "androidx.preference:preference-ktx:1.1.1"
-    implementation 'com.github.hannesa2:githubAppUpdate:1.1'
+    implementation 'com.github.hannesa2:githubAppUpdate:1.3'
     implementation 'com.github.AppDevNext.Logcat:LogcatCore:2.5.0'
 
     implementation project(':samples:shared_camera_java:app')
@@ -125,10 +124,6 @@ static def getGitOriginRemote() {
     return found.replace("origin", "").replace("(push)", "").replace(".git", "").trim()
 }
 
-static def getGitUser() {
-    def token = getGitOriginRemote().split("/")
-    return token[3]
-}
 
 static def getGitRepository() {
     def token = getGitOriginRemote().split("/")
