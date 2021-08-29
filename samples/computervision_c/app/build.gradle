@@ -43,6 +43,10 @@ android {
             path "CMakeLists.txt"
         }
     }
+
+    lintOptions {
+        disable 'UsingOnClickInXml'
+    }
 }
 
 dependencies {
