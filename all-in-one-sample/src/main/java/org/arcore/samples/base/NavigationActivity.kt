@@ -55,6 +55,8 @@ abstract class NavigationActivity : AppCompatActivity(), NavigationView.OnNaviga
         val id = item.itemId
         if (id == R.id.nav_hello_ar_java) {
             openActivity(HelloArActivity::class.java)
+        } else if (id == R.id.nav_drawing) {
+            openActivity(com.googlecreativelab.drawar.DrawAR::class.java)
         } else if (id == R.id.nav_hello_ar_c) {
             openActivity(com.google.ar.core.examples.c.helloar.HelloArActivity::class.java)
         } else if (id == R.id.nav_shared_camera_java) {
