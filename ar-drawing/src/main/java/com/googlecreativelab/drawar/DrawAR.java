@@ -133,7 +133,7 @@ public class DrawAR extends AppCompatActivity implements GLSurfaceView.Renderer,
         super.onCreate(savedInstanceState);
         final SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_drawing);
 
         mSurfaceView = findViewById(R.id.surfaceview);
         mSettingsUI = findViewById(R.id.strokeUI);
