@@ -92,6 +92,7 @@ dependencies {
     implementation 'com.github.hannesa2:githubAppUpdate:1.4'
     implementation 'com.github.AppDevNext.Logcat:LogcatCoreLib:2.9.5'
 
+    implementation project(':ar-drawing')
     implementation project(':samples:shared_camera_java:app')
     implementation project(':samples:persistent_cloud_anchor_java:app')
     implementation project(':samples:hello_ar_java:app')
