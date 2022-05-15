@@ -22,7 +22,7 @@ import com.google.ar.core.examples.java.persistentcloudanchor.MainLobbyActivity
 import com.google.ar.core.examples.java.rawdepth.RawDepthActivity
 import com.google.ar.core.examples.java.sharedcamera.SharedCameraActivity
 import info.hannes.github.AppUpdateHelper
-import info.hannes.logcat.LogcatActivity
+import info.hannes.logcat.ui.LogcatActivity
 import org.arcore.samples.BuildConfig
 import org.arcore.samples.R
 
