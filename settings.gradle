@@ -16,3 +16,5 @@ include ':samples:augmented_faces_java:app'
 
 include ':samples:recording_playback_java:app'
 include ':samples:raw_depth_java:app'
+include ':samples:ml_kotlin:app'
+include ':samples:geospatial_java:app'
