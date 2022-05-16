@@ -26,9 +26,9 @@ import com.google.ar.core.examples.java.common.helpers.SnackbarHelper
 import com.google.ar.core.examples.java.common.samplerender.SampleRender
 
 /** Wraps [R.layout.activity_main] and controls lifecycle operations for [GLSurfaceView]. */
-class MainActivityView(val activity: MainActivity, renderer: AppRenderer) :
+class MainActivityView(val activity: MLActivity, renderer: AppRenderer) :
   DefaultLifecycleObserver {
-  val root = View.inflate(activity, R.layout.activity_main, null)
+  val root = View.inflate(activity, R.layout.activity_ml_main, null)
   val surfaceView =
     root.findViewById<GLSurfaceView>(R.id.surfaceview).apply {
       SampleRender(this, renderer, activity.assets)
