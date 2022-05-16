@@ -41,7 +41,7 @@ import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 
 /** Renders the ML application into using our sample Renderer. */
-class AppRenderer(val activity: MainActivity) : DefaultLifecycleObserver, SampleRender.Renderer {
+class AppRenderer(val activity: MLActivity) : DefaultLifecycleObserver, SampleRender.Renderer {
   companion object {
     val TAG = "MLAppRenderer"
   }
