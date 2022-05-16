@@ -16,11 +16,13 @@ import com.google.android.material.navigation.NavigationView
 import com.google.ar.core.examples.java.augmentedimage.AugmentedImageActivity
 import com.google.ar.core.examples.java.cloudanchor.CloudAnchorActivity
 import com.google.ar.core.examples.java.computervision.ComputerVisionActivity
+import com.google.ar.core.examples.java.geospatial.GeospatialActivity
 import com.google.ar.core.examples.java.helloar.HelloArActivity
 import com.google.ar.core.examples.java.hellorecordingplayback.HelloRecordingPlaybackActivity
 import com.google.ar.core.examples.java.persistentcloudanchor.MainLobbyActivity
 import com.google.ar.core.examples.java.rawdepth.RawDepthActivity
 import com.google.ar.core.examples.java.sharedcamera.SharedCameraActivity
+import com.google.ar.core.examples.kotlin.ml.MLActivity
 import info.hannes.github.AppUpdateHelper
 import info.hannes.logcat.ui.LogcatActivity
 import org.arcore.samples.BuildConfig
@@ -77,6 +79,10 @@ abstract class NavigationActivity : AppCompatActivity(), NavigationView.OnNaviga
             openActivity(MainLobbyActivity::class.java)
         } else if (id == R.id.nav_recording_playback_java) {
             openActivity(HelloRecordingPlaybackActivity::class.java)
+        } else if (id == R.id.nav_geospatial_java) {
+            openActivity(GeospatialActivity::class.java)
+        } else if (id == R.id.nav_ml_kotlin) {
+            openActivity(MLActivity::class.java)
         } else if (id == R.id.nav_raw_depth_java) {
             openActivity(RawDepthActivity::class.java)
         }

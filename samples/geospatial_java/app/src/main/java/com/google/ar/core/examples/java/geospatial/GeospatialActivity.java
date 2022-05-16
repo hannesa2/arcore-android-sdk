@@ -258,7 +258,7 @@ public class GeospatialActivity extends AppCompatActivity
     super.onCreate(savedInstanceState);
     sharedPreferences = getPreferences(Context.MODE_PRIVATE);
 
-    setContentView(R.layout.activity_main);
+    setContentView(R.layout.activity_geospartial_main);
     surfaceView = findViewById(R.id.surfaceview);
     geospatialPoseTextView = findViewById(R.id.geospatial_pose_view);
     statusTextView = findViewById(R.id.status_text_view);
