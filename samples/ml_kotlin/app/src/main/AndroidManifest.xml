@@ -28,7 +28,6 @@
 
   <application
       android:allowBackup="false"
-      android:icon="@drawable/ic_launcher"
       android:label="@string/app_name"
       android:taskAffinity=""
       android:theme="@style/AppTheme"
@@ -36,7 +35,7 @@
       tools:ignore="GoogleAppIndexingWarning">
 
     <activity
-        android:name="com.google.ar.core.examples.kotlin.ml.MainActivity"
+        android:name="com.google.ar.core.examples.kotlin.ml.MLActivity"
         android:screenOrientation="fullSensor"
         android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
         android:exported="true"
