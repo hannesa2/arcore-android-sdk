@@ -65,7 +65,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.10.0'
 
     // MLKit
-    implementation 'com.google.mlkit:object-detection:16.2.3'
+    implementation 'com.google.mlkit:object-detection:17.0.0'
     implementation 'com.google.mlkit:object-detection-custom:16.3.1'
 
     // ARCore (Google Play Services for AR) library.
