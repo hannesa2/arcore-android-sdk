@@ -13,13 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     namespace "com.google.ar.core.examples.java.geospatial"
     compileSdkVersion 35
     defaultConfig {
-        applicationId "com.google.ar.core.examples.java.geospatial"
 
         // AR Optional apps must declare minSdkVersion >= 14.
         // AR Required apps must declare minSdkVersion >= 24.
@@ -54,4 +53,6 @@ dependencies {
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'androidx.concurrent:concurrent-futures:1.1.0'
     implementation 'com.google.guava:guava:31.1-android'
+    implementation project(path: ':samples:shared_camera_java:app')
+    implementation project(path: ':samples:camera_tools')
 }
