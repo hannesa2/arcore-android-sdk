@@ -58,6 +58,14 @@
             android:id="@+id/nav_raw_depth_java"
             android:icon="@drawable/ic_camera_callibration"
             android:title="Raw depth" />
+        <item
+            android:id="@+id/nav_geospatial_java"
+            android:icon="@drawable/ic_camera_callibration"
+            android:title="Geospartial" />
+        <item
+            android:id="@+id/nav_ml_kotlin"
+            android:icon="@drawable/ic_mlkit"
+            android:title="ML" />
     </group>
     <group
         android:id="@+id/grpExtern"

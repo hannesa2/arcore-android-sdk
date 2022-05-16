@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
 }
 
@@ -23,7 +23,6 @@ android {
     compileSdkVersion 35
 
     defaultConfig {
-        applicationId "com.google.ar.core.examples.kotlin.ml"
         minSdkVersion 24
         targetSdkVersion 35
         versionCode 1
@@ -75,4 +74,5 @@ dependencies {
     // Obj - a simple Wavefront OBJ file loader
     // https://github.com/javagl/Obj
     implementation 'de.javagl:obj:0.2.1'
+    implementation project(path: ':samples:camera_tools')
 }
