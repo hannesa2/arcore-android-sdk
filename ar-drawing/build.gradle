@@ -1,11 +1,11 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 32
     defaultConfig {
         // 24 is the minimum since ARCore only works with 24 and higher.
         minSdkVersion 24
-        targetSdkVersion 31
+        targetSdkVersion 32
     }
 
     buildTypes {
