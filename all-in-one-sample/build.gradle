@@ -90,7 +90,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation "androidx.preference:preference-ktx:1.2.0"
     implementation 'com.github.hannesa2:githubAppUpdate:1.4'
-    implementation 'com.github.AppDevNext.Logcat:LogcatCoreUI:2.11.1'
+    implementation 'com.github.AppDevNext.Logcat:LogcatCoreUI:2.11.2'
     implementation 'com.github.AppDevNext.Logcat:LogcatCoreLib:2.11.1'
 
     implementation project(':ar-drawing')
