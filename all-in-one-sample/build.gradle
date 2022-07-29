@@ -91,7 +91,6 @@ dependencies {
     implementation "androidx.preference:preference-ktx:1.2.0"
     implementation 'com.github.hannesa2:githubAppUpdate:1.4'
     implementation 'com.github.AppDevNext.Logcat:LogcatCoreUI:2.11.3'
-    implementation 'com.github.AppDevNext.Logcat:LogcatCoreLib:2.11.2'
 
     implementation project(':ar-drawing')
     implementation project(':samples:shared_camera_java:app')
