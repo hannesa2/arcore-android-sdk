@@ -29,7 +29,7 @@ import com.google.ar.core.examples.kotlin.ml.classification.utils.VertexUtils.to
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
-import okhttp3.MediaType
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody
@@ -39,7 +39,7 @@ import okhttp3.RequestBody
  * [Cloud Vision API's detect multiple objects developer guide](https://cloud.google.com/vision/docs/object-localizer)
  * .
  */
-class GoogleCloudVisionDetector(val activity: MLActivity, val apiKey: String) :
+class GoogleCloudVisionDetector(activity: MLActivity, val apiKey: String) :
   ObjectDetector(activity) {
   companion object {
     val TAG = "GoogleCloudVisionDetector"
@@ -61,13 +61,13 @@ class GoogleCloudVisionDetector(val activity: MLActivity, val apiKey: String) :
       httpClient.newCall(
         Request.Builder()
           .url("https://vision.googleapis.com/v1/images:annotate?key=$apiKey")
-          .post(RequestBody.create(MediaType.parse("text/json"), body.toString()))
+          .post(RequestBody.create("text/json".toMediaTypeOrNull(), body.toString()))
           .build()
       )
 
     // Execute Google Cloud Vision request and parse response body.
     req.execute().use { response ->
-      val responseBody = response.body()?.string()
+      val responseBody = response.body?.string()
       if (responseBody == null) {
         Log.e(TAG, "Failed to parse result body.")
         return emptyList()
