@@ -72,6 +72,6 @@ dependencies {
 
     // Obj - a simple Wavefront OBJ file loader
     // https://github.com/javagl/Obj
-    implementation 'de.javagl:obj:0.2.1'
+    implementation 'de.javagl:obj:0.3.0'
     implementation project(path: ':samples:camera_tools')
 }
