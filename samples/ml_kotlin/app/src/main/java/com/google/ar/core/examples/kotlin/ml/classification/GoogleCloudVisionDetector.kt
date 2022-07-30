@@ -39,7 +39,7 @@ import okhttp3.RequestBody
  * [Cloud Vision API's detect multiple objects developer guide](https://cloud.google.com/vision/docs/object-localizer)
  * .
  */
-class GoogleCloudVisionDetector(val activity: MLActivity, val apiKey: String) :
+class GoogleCloudVisionDetector(activity: MLActivity, val apiKey: String) :
   ObjectDetector(activity) {
   companion object {
     val TAG = "GoogleCloudVisionDetector"

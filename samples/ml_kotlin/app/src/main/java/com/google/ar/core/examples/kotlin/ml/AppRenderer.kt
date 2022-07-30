@@ -43,7 +43,7 @@ import kotlinx.coroutines.launch
 /** Renders the ML application into using our sample Renderer. */
 class AppRenderer(val activity: MLActivity) : DefaultLifecycleObserver, SampleRender.Renderer {
   companion object {
-    val TAG = "MLAppRenderer"
+    const val TAG = "MLAppRenderer"
   }
 
   lateinit var view: MainActivityView
