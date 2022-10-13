@@ -22,7 +22,7 @@ android {
         // Camera2 API requires minSdkVersion >= 23
         // "AR Optional" apps must declare minSdkVersion >= 14.
         // "AR Required" apps must declare minSdkVersion >= 24.
-        minSdkVersion 23
+        minSdkVersion 28
         targetSdkVersion 36
     }
     compileOptions {
