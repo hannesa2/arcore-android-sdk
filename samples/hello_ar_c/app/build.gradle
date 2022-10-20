@@ -64,7 +64,7 @@ dependencies {
     natives 'com.google.ar:core:1.41.0'
 
     implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'com.google.android.material:material:1.7.0'
     implementation project(":samples:camera_tools")
 }
 
