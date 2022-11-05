@@ -24,7 +24,6 @@ import javax.microedition.khronos.opengles.GL10;
 
 /** A SampleRender context. */
 public class SampleRender {
-  private static final String TAG = SampleRender.class.getSimpleName();
 
   private final AssetManager assetManager;
 
