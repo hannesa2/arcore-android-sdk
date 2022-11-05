@@ -18,7 +18,7 @@ package com.google.ar.core.examples.java.ml.classification
 
 import android.media.Image
 import android.util.Log
-import com.google.ar.core.examples.java.ml.MainActivity
+import com.google.ar.core.examples.java.ml.MLKitActivity
 import com.google.ar.core.examples.java.ml.classification.utils.ImageUtils
 import com.google.ar.core.examples.java.ml.classification.utils.ImageUtils.toByteArray
 import com.google.ar.core.examples.java.ml.classification.utils.VertexUtils.calculateAverage
@@ -37,7 +37,7 @@ import com.google.cloud.vision.v1.Image as GCVImage
  *
  * Finds detected objects ([DetectedObjectResult]s) given an [android.media.Image].
  */
-class GoogleCloudVisionDetector(val activity: MainActivity) : ObjectDetector(activity) {
+class GoogleCloudVisionDetector(val activity: MLKitActivity) : ObjectDetector(activity) {
   companion object {
     val TAG = "GoogleCloudVisionDetector"
   }
