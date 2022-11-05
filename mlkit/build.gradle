@@ -1,0 +1,66 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+
+    namespace 'com.google.ar.core.examples.java.ml'
+    compileSdkVersion 33
+
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 33
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'META-INF/INDEX.LIST']
+        }
+    }
+}
+
+android.sourceSets.main.java.srcDirs += ['../third_party']
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4'
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+    implementation 'androidx.lifecycle:lifecycle-common-java8:2.5.1'
+
+    implementation 'com.google.android.material:material:1.7.0'
+
+    // Google Cloud Vision APIs
+    implementation platform('com.google.cloud:libraries-bom:19.2.1')
+    implementation 'com.google.cloud:google-cloud-vision:1.102.0'
+    implementation 'io.grpc:grpc-okhttp:1.50.2'
+
+    // MLKit
+    implementation 'com.google.mlkit:object-detection:17.0.0'
+    implementation 'com.google.mlkit:object-detection-custom:17.0.0'
+
+    // ARCore
+    implementation 'com.google.ar:core:1.34.0'
+
+    // Obj - a simple Wavefront OBJ file loader
+    // https://github.com/javagl/Obj
+    implementation 'de.javagl:obj:0.3.0'
+}
