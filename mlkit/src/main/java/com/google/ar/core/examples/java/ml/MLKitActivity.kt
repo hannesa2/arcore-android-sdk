@@ -32,12 +32,12 @@ import com.google.ar.core.exceptions.UnavailableSdkTooOldException
 import com.google.ar.core.exceptions.UnavailableUserDeclinedInstallationException
 
 
-class MainActivity : AppCompatActivity() {
+class MLKitActivity : AppCompatActivity() {
   val TAG = "MainActivity"
   lateinit var arCoreSessionHelper: ARCoreSessionLifecycleHelper
 
   lateinit var renderer: AppRenderer
-  lateinit var view: MainActivityView
+  lateinit var view: MLKitActivityView
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
 
     renderer = AppRenderer(this)
     lifecycle.addObserver(renderer)
-    view = MainActivityView(this, renderer)
+    view = MLKitActivityView(this, renderer)
     setContentView(view.root)
     renderer.bindView(view)
     lifecycle.addObserver(view)

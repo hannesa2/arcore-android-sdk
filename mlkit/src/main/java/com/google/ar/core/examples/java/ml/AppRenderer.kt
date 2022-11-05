@@ -43,12 +43,12 @@ import kotlinx.coroutines.launch
 /**
  * Renders the HelloAR application into using our example Renderer.
  */
-class AppRenderer(val activity: MainActivity) : DefaultLifecycleObserver, SampleRender.Renderer, CoroutineScope by MainScope() {
+class AppRenderer(val activity: MLKitActivity) : DefaultLifecycleObserver, SampleRender.Renderer, CoroutineScope by MainScope() {
   companion object {
     val TAG = "HelloArRenderer"
   }
 
-  lateinit var view: MainActivityView
+  lateinit var view: MLKitActivityView
 
   val displayRotationHelper = DisplayRotationHelper(activity)
   lateinit var backgroundRenderer: BackgroundRenderer
@@ -75,7 +75,7 @@ class AppRenderer(val activity: MainActivity) : DefaultLifecycleObserver, Sample
     displayRotationHelper.onPause()
   }
 
-  fun bindView(view: MainActivityView) {
+  fun bindView(view: MLKitActivityView) {
     this.view = view
 
     view.scanButton.setOnClickListener {
