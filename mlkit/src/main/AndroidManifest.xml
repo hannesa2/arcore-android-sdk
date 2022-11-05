@@ -24,14 +24,13 @@
   <uses-feature android:name="android.hardware.camera.ar" />
 
   <application
-      android:allowBackup="true"
       android:icon="@mipmap/ic_launcher"
       android:label="@string/app_name"
       android:roundIcon="@mipmap/ic_launcher_round"
       android:supportsRtl="true"
       android:theme="@style/Theme.Design.Light.NoActionBar">
     <activity
-        android:name="com.google.ar.core.examples.java.ml.MainActivity"
+        android:name="com.google.ar.core.examples.java.ml.MLKitActivity"
         android:screenOrientation="fullSensor"
         android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
         android:exported="true">
