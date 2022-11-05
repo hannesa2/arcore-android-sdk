@@ -66,6 +66,10 @@
             android:id="@+id/nav_ml_kotlin"
             android:icon="@drawable/ic_mlkit"
             android:title="ML" />
+        <item
+            android:id="@+id/nav_mlkit_kotlin"
+            android:icon="@drawable/ic_mlkit"
+            android:title="MLKit" />
     </group>
     <group
         android:id="@+id/grpExtern"

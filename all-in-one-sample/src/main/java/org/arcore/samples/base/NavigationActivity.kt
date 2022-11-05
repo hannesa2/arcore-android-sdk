@@ -19,6 +19,7 @@ import com.google.ar.core.examples.java.computervision.ComputerVisionActivity
 import com.google.ar.core.examples.java.geospatial.GeospatialActivity
 import com.google.ar.core.examples.java.helloar.HelloArActivity
 import com.google.ar.core.examples.java.hellorecordingplayback.HelloRecordingPlaybackActivity
+import com.google.ar.core.examples.java.ml.MLKitActivity
 import com.google.ar.core.examples.java.persistentcloudanchor.MainLobbyActivity
 import com.google.ar.core.examples.java.rawdepth.RawDepthActivity
 import com.google.ar.core.examples.java.sharedcamera.SharedCameraActivity
@@ -83,6 +84,8 @@ abstract class NavigationActivity : AppCompatActivity(), NavigationView.OnNaviga
             openActivity(GeospatialActivity::class.java)
         } else if (id == R.id.nav_ml_kotlin) {
             openActivity(MLActivity::class.java)
+        } else if (id == R.id.nav_mlkit_kotlin) {
+            openActivity(MLKitActivity::class.java)
         } else if (id == R.id.nav_raw_depth_java) {
             openActivity(RawDepthActivity::class.java)
         }
