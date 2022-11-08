@@ -11,6 +11,8 @@ android {
         targetSdkVersion 33
         versionCode 1
         versionName '1.0'
+
+        resValue "string", "ARCORE_KEY", "\"" + System.getenv("ARCORE_KEY") + "\""
     }
 
     buildTypes {
