@@ -43,5 +43,8 @@
     </activity>
     <!-- Indicates whether "Google Play Services for AR" (ARCore) is "required" or "optional". -->
     <meta-data android:name="com.google.ar.core" android:value="required" />
+
+    <!-- https://console.cloud.google.com/iam-admin/serviceaccounts/details/109201959835965534404/keys?project=arcore-sample-368020&supportedpurview=project-->
+    <meta-data android:name="com.google.ar.core.examples.kotlin.ml.API_KEY" android:value="@string/ARCORE_KEY" />
   </application>
 </manifest>
