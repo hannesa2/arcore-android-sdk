@@ -39,6 +39,7 @@ jobs:
           KEYSTORE_PASS: ${{ secrets.KEYSTORE_PASS }}
           ALIAS_NAME: ${{ secrets.ALIAS_NAME }}
           ALIAS_PASS: ${{ secrets.ALIAS_PASS }}
+          ARCORE_KEY: ${{ secrets.ARCORE_KEY }}
           releaseKey: ${{ secrets.releaseKey }}
       - name: cleanup keystore
         run: ./signing/cleanup.sh
