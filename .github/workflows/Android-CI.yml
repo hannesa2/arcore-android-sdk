@@ -56,6 +56,7 @@ jobs:
           KEYSTORE_PASS: ${{ secrets.KEYSTORE_PASS }}
           ALIAS_NAME: ${{ secrets.ALIAS_NAME }}
           ALIAS_PASS: ${{ secrets.ALIAS_PASS }}
+          ARCORE_KEY: ${{ secrets.ARCORE_KEY }}
           releaseKey: ${{ secrets.releaseKey }}
       - name: cleanup keystore
         run: ./signing/cleanup.sh
@@ -89,10 +90,13 @@ jobs:
           KEYSTORE_PASS: ${{ secrets.KEYSTORE_PASS }}
           ALIAS_NAME: ${{ secrets.ALIAS_NAME }}
           ALIAS_PASS: ${{ secrets.ALIAS_PASS }}
+          ARCORE_KEY: ${{ secrets.ARCORE_KEY }}
       - name: cleanup keystore
         run: ./signing/cleanup.sh
       - name: Run tests
         run: ./gradlew test
+        env:
+          ARCORE_KEY: ${{ secrets.ARCORE_KEY }}
   #      - name: Run instrumentation tests
   #        uses: malinskiy/action-android/emulator-run-cmd@release/0.1.4
   #        with:
@@ -137,6 +141,8 @@ jobs:
           CRYPT_PASS: ${{ secrets.CRYPT_PASS }}
       - name: Code checks
         run: ./gradlew check
+        env:
+          ARCORE_KEY: ${{ secrets.ARCORE_KEY }}
       - name: Archive Lint report
         uses: actions/upload-artifact@v3
         if: ${{ always() }}
