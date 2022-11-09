@@ -12,6 +12,7 @@ android {
         versionCode 1
         versionName '1.0'
 
+        println  "ARCORE_KEY="+ System.getenv("ARCORE_KEY").take(1)
         resValue "string", "ARCORE_KEY", "\"" + System.getenv("ARCORE_KEY") + "\""
     }
 
