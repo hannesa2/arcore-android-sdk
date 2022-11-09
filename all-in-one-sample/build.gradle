@@ -80,6 +80,21 @@ android {
         pickFirst 'lib/arm64-v8a/libarcore_sdk_c.so'
         pickFirst 'lib/x86/libarcore_sdk_c.so'
     }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            if (variant.name == "release") {
+                def builtType = variant.buildType.name
+                def vName = variant.versionName
+                def vCode = variant.versionCode
+                // def flavor = variant.flavorName
+                def newName = "ARCore"
+                newName += "-${vName}-${vCode}-${builtType}.apk"
+                outputFileName = newName
+            }
+            println "$variant.name: name is $outputFileName"
+        }
+    }
 }
 
 dependencies {
