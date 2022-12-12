@@ -106,7 +106,7 @@ dependencies {
     implementation "androidx.preference:preference-ktx:1.2.0"
     implementation 'com.github.hannesa2:githubAppUpdate:1.6'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
-    implementation 'com.github.AppDevNext.Logcat:LogcatCoreUI:2.11.3'
+    implementation 'com.github.AppDevNext.Logcat:LogcatCoreUI:2.12'
 
     implementation project(':ar-drawing')
     implementation project(':samples:shared_camera_java:app')
