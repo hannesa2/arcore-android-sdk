@@ -106,7 +106,7 @@ abstract class NavigationActivity : AppCompatActivity(), NavigationView.OnNaviga
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_update -> {
-                AppUpdateHelper.checkForNewVersion(
+                AppUpdateHelper.checkWithDialog(
                         this,
                         BuildConfig.GIT_REPOSITORY,
                         { msg -> Toast.makeText(this, msg, Toast.LENGTH_LONG).show() },
