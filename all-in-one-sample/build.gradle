@@ -126,7 +126,7 @@ dependencies {
     implementation project(':samples:recording_playback_java:app')
     implementation project(':samples:raw_depth_java:app')
 
-    implementation "androidx.core:core-ktx:1.9.0"
+    implementation "androidx.core:core-ktx:1.10.0"
 }
 
 static def getTag() {
