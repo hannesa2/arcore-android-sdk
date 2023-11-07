@@ -68,7 +68,7 @@ dependencies {
 
     // MLKit
     implementation 'com.google.mlkit:object-detection:17.0.0'
-    implementation 'com.google.mlkit:object-detection-custom:17.0.0'
+    implementation 'com.google.mlkit:object-detection-custom:17.0.1'
 
     // ARCore (Google Play Services for AR) library.
     implementation 'com.google.ar:core:1.46.0'
