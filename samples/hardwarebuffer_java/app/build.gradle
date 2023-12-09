@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 def arcore_libpath = "${buildDir}/arcore-native"
 
@@ -51,6 +52,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
     }
     buildTypes {
         release {
