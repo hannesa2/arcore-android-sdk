@@ -23,6 +23,7 @@ android {
         // AR Optional apps must declare minSdkVersion >= 14.
         // AR Required apps must declare minSdkVersion >= 24.
         minSdkVersion 28
+        compileSdk 35
         targetSdkVersion 36
     }
     compileOptions {
