@@ -2,11 +2,11 @@ apply plugin: 'com.android.library'
 
 android {
     namespace 'com.googlecreativelab.drawar'
-    compileSdkVersion 33
     defaultConfig {
         // 24 is the minimum since ARCore only works with 24 and higher.
         minSdkVersion 28
-        targetSdkVersion 33
+        compileSdk 34
+        targetSdk 34
     }
 
     buildTypes {

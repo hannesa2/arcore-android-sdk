@@ -17,12 +17,12 @@ apply plugin: 'com.android.library'
 
 android {
     namespace "com.google.ar.core.examples.java.computervision"
-    compileSdkVersion 35
     defaultConfig {
         // "AR Optional" apps must declare minSdkVersion >= 14.
         // "AR Required" apps must declare minSdkVersion >= 24.
         minSdkVersion 28
-        targetSdkVersion 35
+        compileSdk 35
+        targetSdk 35
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17

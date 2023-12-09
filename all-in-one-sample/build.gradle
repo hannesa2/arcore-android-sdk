@@ -14,13 +14,13 @@ def setVersionName = { ->
 
 android {
     namespace 'org.arcore.samples'
-    compileSdkVersion 33
     defaultConfig {
         applicationId "info.arcore.samples"
 
         // 24 is the minimum since ARCore only works with 24 and higher.
         minSdkVersion 28
-        targetSdkVersion 33
+        compileSdk 34
+        targetSdk 34
         versionCode getGitCommitCount()
         versionName setVersionName()
 
