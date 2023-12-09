@@ -18,13 +18,13 @@ apply plugin: 'kotlin-android'
 
 android {
     namespace 'com.google.ar.core.examples.java.geospatial'
-    compileSdkVersion 34
     defaultConfig {
 
         // AR Optional apps must declare minSdkVersion >= 14.
         // AR Required apps must declare minSdkVersion >= 24.
         minSdkVersion 28
-        targetSdkVersion 34
+        compileSdk 34
+        targetSdk 34
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
