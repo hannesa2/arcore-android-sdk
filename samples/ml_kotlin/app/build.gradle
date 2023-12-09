@@ -20,11 +20,11 @@ plugins {
 
 android {
     namespace 'com.google.ar.core.examples.kotlin.ml'
-    compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 28
-        targetSdkVersion 33
+        compileSdk 34
+        targetSdk 34
 
         resValue "string", "ARCORE_KEY", "\"" + System.getenv("ARCORE_KEY") + "\""
     }
