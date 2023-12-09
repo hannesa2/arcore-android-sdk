@@ -19,13 +19,12 @@ plugins {
 }
 
 android {
+    namespace 'com.google.ar.core.examples.kotlin.ml'
     compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 28
         targetSdkVersion 33
-        versionCode 1
-        versionName '1.0'
 
         resValue "string", "ARCORE_KEY", "\"" + System.getenv("ARCORE_KEY") + "\""
     }
@@ -41,7 +40,7 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
     packagingOptions {
         exclude 'META-INF/DEPENDENCIES'

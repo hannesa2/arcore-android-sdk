@@ -26,6 +26,7 @@ def arcore_libpath = "${buildDir}/arcore-native"
 configurations { natives }
 
 android {
+    namespace 'com.google.ar.core.examples.c.helloar'
     compileSdkVersion 34
     defaultConfig {
         // "AR Optional" apps must declare minSdkVersion >= 14.
