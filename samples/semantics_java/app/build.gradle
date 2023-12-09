@@ -17,14 +17,14 @@ apply plugin: 'com.android.application'
 
 android {
     namespace "com.google.ar.core.examples.java.hellosemantics"
-    compileSdkVersion 35
     defaultConfig {
         applicationId "com.google.ar.core.examples.java.hellosemantics"
 
         // AR Optional apps must declare minSdkVersion >= 14.
         // AR Required apps must declare minSdkVersion >= 24.
         minSdkVersion 24
-        targetSdkVersion 35
+        compileSdk 35
+        targetSdk 35
         versionCode 1
         versionName '1.0'
     }

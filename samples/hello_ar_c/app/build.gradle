@@ -32,7 +32,8 @@ android {
         // "AR Optional" apps must declare minSdkVersion >= 14.
         // "AR Required" apps must declare minSdkVersion >= 24.
         minSdkVersion 28
-        targetSdkVersion 35
+        compileSdk 35
+        targetSdk 35
 
         externalNativeBuild {
             cmake {

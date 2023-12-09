@@ -26,14 +26,14 @@ configurations { natives }
 
 android {
     namespace "com.google.ar.core.examples.c.simplevulkan"
-    compileSdkVersion 35
     defaultConfig {
         applicationId "com.google.ar.core.examples.c.simplevulkan"
 
         // "AR Optional" apps must declare minSdkVersion >= 14.
         // "AR Required" apps must declare minSdkVersion >= 28.
         minSdkVersion 28
-        targetSdkVersion 35
+        compileSdk 35
+        targetSdk 35
         versionCode 1
         versionName '1.0'
 
