@@ -1,7 +1,7 @@
 name: Scheduled Merge Remote Action
 on:
   schedule:
-    - cron: "15 11 * * *"
+    - cron: "15 17 * * *"
     # scheduled for At 12:15
 
 jobs:
