@@ -16,7 +16,7 @@
 apply plugin: 'com.android.library'
 
 android {
-    namespace "com.google.ar.core.examples.java.augmentedfaces"
+    namespace 'com.google.ar.core.examples.java.augmentedfaces'
     compileSdkVersion 35
     defaultConfig {
 
