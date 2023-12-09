@@ -13,6 +13,7 @@ def setVersionName = { ->
 }
 
 android {
+    namespace 'org.arcore.samples'
     compileSdkVersion 33
     defaultConfig {
         applicationId "info.arcore.samples"

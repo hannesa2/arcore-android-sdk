@@ -18,6 +18,7 @@ apply plugin: 'com.android.library'
 def releaseKey = System.getenv("releaseKey")
 
 android {
+    namespace 'com.google.ar.core.examples.java.cloudanchor'
     compileSdkVersion 34
     defaultConfig {
         // "AR Optional" apps must declare minSdkVersion >= 14.

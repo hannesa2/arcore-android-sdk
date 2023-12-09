@@ -16,6 +16,7 @@
 apply plugin: 'com.android.library'
 
 android {
+    namespace 'com.google.ar.core.examples.java.computervision'
     compileSdkVersion 34
     defaultConfig {
         // "AR Optional" apps must declare minSdkVersion >= 14.
