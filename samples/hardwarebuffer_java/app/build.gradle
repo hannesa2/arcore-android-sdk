@@ -22,14 +22,14 @@ def arcore_libpath = "${buildDir}/arcore-native"
 configurations { natives }
 
 android {
-    compileSdkVersion 34
     defaultConfig {
         applicationId "com.google.ar.core.examples.java.helloarhardwarebuffer"
 
         // AR Optional apps must declare minSdkVersion >= 14.
         // AR Required apps must declare minSdkVersion >= 27.
         minSdkVersion 27
-        targetSdkVersion 34
+        compileSdk 34
+        targetSdk 34
         versionCode 1
         versionName '1.0'
 
