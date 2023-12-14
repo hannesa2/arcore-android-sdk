@@ -45,7 +45,7 @@ dependencies {
     implementation 'de.javagl:obj:0.4.0'
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'com.google.android.material:material:1.11.0'
 
     implementation 'androidx.lifecycle:lifecycle-common-java8:2.6.2'
     implementation project(":samples:camera_tools")
