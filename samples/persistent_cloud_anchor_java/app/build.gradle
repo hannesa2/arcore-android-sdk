@@ -55,5 +55,5 @@ dependencies {
     implementation 'com.google.guava:guava:33.0.0-android'
 
     implementation project(":samples:camera_tools")
-    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+    implementation 'com.google.android.gms:play-services-auth:21.1.1'
 }
