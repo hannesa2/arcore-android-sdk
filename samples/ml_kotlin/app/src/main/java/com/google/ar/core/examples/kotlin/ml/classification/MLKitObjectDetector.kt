@@ -35,7 +35,7 @@ class MLKitObjectDetector(context: Activity) : ObjectDetector(context) {
   // val builder = CustomObjectDetectorOptions.Builder(model)
 
   // For the ML Kit default model, use the following:
-  val builder = ObjectDetectorOptions.Builder()
+  private val builder = ObjectDetectorOptions.Builder()
 
   private val options =
     builder

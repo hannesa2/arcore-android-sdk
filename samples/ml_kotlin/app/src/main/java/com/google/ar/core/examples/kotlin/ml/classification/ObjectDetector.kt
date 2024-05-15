@@ -27,7 +27,7 @@ import com.google.ar.core.examples.kotlin.ml.third_party.YuvToRgbConverter
  * infer object labels in a given [Image] and gives results in a list of [DetectedObjectResult].
  */
 abstract class ObjectDetector(val context: Context) {
-  val yuvConverter = YuvToRgbConverter(context)
+  private val yuvConverter = YuvToRgbConverter(context)
 
   /**
    * Infers a list of [DetectedObjectResult] given a camera image frame, which contains a confidence

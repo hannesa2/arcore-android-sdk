@@ -41,9 +41,9 @@ import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 
 /** Renders the ML application into using our sample Renderer. */
-class AppRenderer(val activity: MainActivity) : DefaultLifecycleObserver, SampleRender.Renderer {
+class AppRenderer(val activity: MLActivity) : DefaultLifecycleObserver, SampleRender.Renderer {
   companion object {
-    val TAG = "MLAppRenderer"
+    const val TAG = "MLAppRenderer"
   }
 
   lateinit var view: MainActivityView
@@ -71,6 +71,7 @@ class AppRenderer(val activity: MainActivity) : DefaultLifecycleObserver, Sample
     val applicationInfo =
       activity.packageManager.getApplicationInfo(activity.packageName, PackageManager.GET_META_DATA)
     val apiKey = applicationInfo.metaData.getString("com.google.ar.core.examples.kotlin.ml.API_KEY")
+    Log.d("apiKey", apiKey.toString().take(1))
     if (apiKey == null) null else GoogleCloudVisionDetector(activity, apiKey)
   }
 

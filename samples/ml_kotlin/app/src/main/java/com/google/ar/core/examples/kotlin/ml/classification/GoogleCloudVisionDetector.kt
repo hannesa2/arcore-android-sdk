@@ -20,7 +20,7 @@ import android.graphics.PointF
 import android.media.Image
 import android.util.Base64
 import android.util.Log
-import com.google.ar.core.examples.kotlin.ml.MainActivity
+import com.google.ar.core.examples.kotlin.ml.MLActivity
 import com.google.ar.core.examples.kotlin.ml.classification.utils.ImageUtils
 import com.google.ar.core.examples.kotlin.ml.classification.utils.ImageUtils.toByteArray
 import com.google.ar.core.examples.kotlin.ml.classification.utils.VertexUtils
@@ -39,7 +39,7 @@ import okhttp3.RequestBody
  * [Cloud Vision API's detect multiple objects developer guide](https://cloud.google.com/vision/docs/object-localizer)
  * .
  */
-class GoogleCloudVisionDetector(val activity: MainActivity, val apiKey: String) :
+class GoogleCloudVisionDetector(activity: MLActivity, val apiKey: String) :
   ObjectDetector(activity) {
   companion object {
     val TAG = "GoogleCloudVisionDetector"
