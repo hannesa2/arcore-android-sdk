@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 def arcore_libpath = "${buildDir}/arcore-native"
 
@@ -21,14 +22,15 @@ def arcore_libpath = "${buildDir}/arcore-native"
 configurations { natives }
 
 android {
-    compileSdkVersion 34
+    namespace "com.google.ar.core.examples.java.helloarhardwarebuffer"
     defaultConfig {
         applicationId "com.google.ar.core.examples.java.helloarhardwarebuffer"
 
         // AR Optional apps must declare minSdkVersion >= 14.
         // AR Required apps must declare minSdkVersion >= 27.
         minSdkVersion 27
-        targetSdkVersion 34
+        compileSdk 35
+        targetSdk 35
         versionCode 1
         versionName '1.0'
 
@@ -48,8 +50,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
     }
     buildTypes {
         release {
@@ -66,8 +71,8 @@ android {
 
 dependencies {
     // ARCore (Google Play Services for AR) library.
-    implementation 'com.google.ar:core:1.44.0'
-    natives 'com.google.ar:core:1.44.0'
+    implementation 'com.google.ar:core:1.46.0'
+    natives 'com.google.ar:core:1.46.0'
 
     // Obj - a simple Wavefront OBJ file loader
     // https://github.com/javagl/Obj
