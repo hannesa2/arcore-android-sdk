@@ -19,8 +19,8 @@ android {
 
         // 24 is the minimum since ARCore only works with 24 and higher.
         minSdkVersion 28
-        compileSdk 34
-        targetSdk 34
+        compileSdk 35
+        targetSdk 35
         versionCode getGitCommitCount()
         versionName setVersionName()
 
