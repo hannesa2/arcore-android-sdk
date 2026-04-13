@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/grp1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_augmented_faces_java"
+            android:icon="@drawable/ic_face_recognition"
+            android:title="augmented_faces_java" />
+        <item
+            android:id="@+id/nav_augmented_image_java"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="augmented_image_java" />
+        <item
+            android:id="@+id/nav_augmented_image_c"
+            android:icon="@drawable/ic_camera_mixed_processing"
+            android:title="augmented_image_c" />
+        <item
+            android:id="@+id/nav_cloud_anchor_java"
+            android:icon="@drawable/ic_camera_iris"
+            android:title="cloud_anchor_java" />
+        <item
+            android:id="@+id/nav_computervision_java"
+            android:icon="@drawable/ic_tag_faces"
+            android:title="computervision_java" />
+        <item
+            android:id="@+id/nav_computervision_c"
+            android:icon="@drawable/ic_tag_faces"
+            android:title="computervision_c" />
+        <item
+            android:id="@+id/nav_hello_ar_java"
+            android:icon="@drawable/ic_image_filter_black_white"
+            android:title="Hello AR Jva" />
+        <item
+            android:id="@+id/nav_hello_ar_c"
+            android:icon="@drawable/ic_palette"
+            android:title="Hello AR C" />
+        <item
+            android:id="@+id/nav_shared_camera_java"
+            android:icon="@drawable/ic_camera_callibration"
+            android:title="shared_camera_java" />
+    </group>
+    <group
+        android:id="@+id/grpNew"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_persistant_cloud_java"
+            android:icon="@drawable/ic_camera_callibration"
+            android:title="Persistant Cloud Java" />
+
+        <item
+            android:id="@+id/nav_recording_playback_java"
+            android:icon="@drawable/ic_camera_callibration"
+            android:title="Recording Playback" />
+        <item
+            android:id="@+id/nav_raw_depth_java"
+            android:icon="@drawable/ic_camera_callibration"
+            android:title="Raw depth" />
+        <item
+            android:id="@+id/nav_geospatial_java"
+            android:icon="@drawable/ic_camera_callibration"
+            android:title="Geospartial" />
+        <item
+            android:id="@+id/nav_ml_kotlin"
+            android:icon="@drawable/ic_mlkit"
+            android:title="ML" />
+    </group>
+    <group
+        android:id="@+id/grpExtern"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_drawing"
+            android:icon="@drawable/ic_camera_callibration"
+            android:title="AR Drawing" />
+    </group>
+
+</menu>
